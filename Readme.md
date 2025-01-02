@@ -35,8 +35,8 @@ To get started with the Flutter Demos, follow these steps:
 1. **Clone the repository**:
 ```
 bash
-git clone https://github.com/yourusername/flutter-demos.git
-cd flutter-demos
+git clone https://github.com/dr-bcyadav/Flutter-Demos.git
+cd Flutter-Demos
 ```
 
 1. Install Flutter: Make sure you have Flutter installed on your machine. You can follow the official installation guide here.
