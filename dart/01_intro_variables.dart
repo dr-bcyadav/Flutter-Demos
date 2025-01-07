@@ -1,16 +1,16 @@
 /* ====================================================================== */
 /*                                  ABOUT                                 */
 /* ====================================================================== */
-/* --------------------- Compiled by: (Dr.) B.C. Yadav ------------------ */
+/* -------------------- Compiled by: (Dr.) B.C. Yadav ------------------- */
 /* ----------------------- On: 2025/01/06 19:48:02 ---------------------- */
 /* -------------------- Updated: 2025/01/07 07:23:26 -------------------- */
 /* ====================================================================== */
-/* This code covers the basic know-hows of dart language focussing on dart variables, and assumes that:
+/* This code covers the basic know-hows of dart language, and assumes that:
   - flutter and dart have been installed in the system,
   - `flutter` and `dart` are recognized as global commands, and 
   - dart programs can be run simply by typing `dart \path\to\dart_program_name.dart` 
 
-Alternatively, one can make use of https://dartpad.dev/ for running the dart snippets.*/
+Alternatively, one can make use of dartpad.com for running the dart snippets.*/
 
 
 
@@ -94,9 +94,3 @@ class MyClass {
 
 // There's another keyword called `dynamic` which lets Dart decide the appropriate data type of the variable.
 dynamic var2 = "String in use";
-
-
-
-/* ====================================================================== */
-/*                                   END                                  */
-/* ====================================================================== */
