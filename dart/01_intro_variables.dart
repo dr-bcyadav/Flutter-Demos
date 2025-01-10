@@ -94,3 +94,9 @@ class MyClass {
 
 // There's another keyword called `dynamic` which lets Dart decide the appropriate data type of the variable.
 dynamic var2 = "String in use";
+
+
+
+/* ====================================================================== */
+/*                                   END                                  */
+/* ====================================================================== */
