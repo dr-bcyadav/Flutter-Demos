@@ -3,7 +3,7 @@
 /* ====================================================================== */
 /* --------------------- Compiled by: (Dr.) B.C. Yadav ------------------ */
 /* ----------------------- On: 2025/01/18 08:03:04 ---------------------- */
-/* -------------------- Updated: 2025/01/20 16:02:05 -------------------- */
+/* -------------------- Updated: 2025/01/20 16:51:39 -------------------- */
 /* ====================================================================== */
 /* This code covers the basic know-hows of dart language focussing on data types in dart, and assumes that:
   - flutter and dart have been installed in the system,
@@ -55,6 +55,9 @@ class Numbers{
   }
 }
 
+// Some properties of numbers are: ["hashcode", "isFinite", "isInfinite", "isNan", "isNegative", "sign", "isEven", "isOdd"]
+// Some useful methods are: ["abs()", "ceil()", "floor()", "compareTo()", "remainder()", "round()", "toDouble()", "toInt()", "toString()", "truncate()"]
+
 
 
 /* ====================================================================== */
@@ -64,10 +67,26 @@ class Numbers{
 class StringDataType{
 
   String str1 = "Dart is a ";
-  String str2 = "necessity";
+  String str2 = "key language";
 
   StringDataType(){
-    print(str1 + str2);
+
+    // Concatenating strings
+    // Using plus operator within print statement
+    print(str1+str2);
+
+    // Using string interpolation
+    print("$str1 key language");
+    // - newline operator is automatically added after str1 in the above case
+
+    // Just separating the strings by quotes
+    var str3 = 'Dart ''is ''a ''key language';  
+    print(str3);
+
+    // Using plus operator during assignment
+    var str4 = 'Dart '+'is '+'a '+'key language';
+    print(str4);
+
   }
 }
 
@@ -79,7 +98,7 @@ class StringDataType{
 class BooleanDataType{
 
   String str1 = "Dart is a ";
-  String str2 = "necessity";
+  String str2 = "key language";
 
   BooleanDataType(){
     bool val = (str1 == str2);
@@ -92,27 +111,67 @@ class BooleanDataType{
 /* ====================================================================== */
 /*                                  LIST                                  */
 /* ====================================================================== */
-// A list is an ordered collection of objects. These can be variable or fixed in size.
+// A list is an ordered collection of objects. These can be fixed or growable. 
+// Based on structure, a list can be 1D, 2D, 3D or multi-dimensional.
+
 class ListDataType{
 
-  // Declaring a list of alternate size
-  List<int> var1 = [];
-  List<int> var2 = [10];
+  // Declaring a growable list
+  List<int> list1 = [];
+  List<int> list2 = [10];
 
   // Declaring a list of fixed size
-  List<int> var3 = List<int>.filled(3,1);
-  List<int> var4 = List<int>.generate(10, (index) => 3 * index);
+  List<int> list3 = List<int>.filled(3, 1, growable:false);
+  List<int> list4 = List<int>.generate(10, (index) => 3 * index, growable: false);
+  // - By default `growable` is `true` for `.generate()`, hence it is rather modifiable by default.
+
+  // Lists can also be declared simply as follows:
+  var list5 = ['element0', 'element1'];
 
   // Constructor
   ListDataType(){
 
-    var1.add(1);  // elements can be added to a variable length list
-    // var3.add(4);  // will throw error for this fixed length list
+    // Elements can be added to a growable list
+    list1.add(1);  
+    list1.addAll([3,4,5]);  // adding multiple values
+    list1.insert(2,9);  // adding value at a specific index
 
-    print(var1);
-    print(var2);
-    print(var3);
-    print(var4);
+    // Following will throw error
+    // list3.add(4); 
+    // list4.add(4); // won't throw error if `growable:true` passed during declaration
+
+    print("List1: $list1");
+    print("List2: $list2");
+    print("List3: $list3");
+    print("List4: $list4");
+    print("List5: $list5");
+  }
+
+  // Demonstrating multi-dimensional lists
+  MultiDimLists(){
+    String pad = '*'*10;
+    print("\n $pad Multi Dimensional Lists $pad\n");
+
+    // Declaring a 2D list 
+    int a = 3; 
+    int b = 3; 
+
+    var list6 = List.generate(a, (i) => List.filled(b,0), growable: false);
+    // Inserting values now
+    for (int i=0; i<3; ++i){
+      for (int j=0; j<3; ++j){
+        list6[i][j] = i+j;
+      }
+    }
+
+    print("List6:\n$list6\n");
+
+    // Another way of declaring a 2D list 
+    var list7 = List.generate(3, (i) => List.generate(3, (j) => i+j));
+    print("List7:\n$list7\n");
+
+    // Creating a 3D list 
+    var list8 = List.generate(length, generator)
   }
 }
 
@@ -141,7 +200,6 @@ class MapDataType{
 
   var map6 = new Map();
 
-
   // Constructor
   MapDataType(){
 
@@ -166,14 +224,18 @@ class MapDataType{
 /* ====================================================================== */
 void main(){
 
-  var numbers = Numbers();
-  numbers;
+  // var numbers = Numbers();
+  // numbers;
 
   // var stringDataType = StringDataType();
   // stringDataType;
 
   // var booleanDataType = BooleanDataType();
   // booleanDataType;
+
+  var listDataType = ListDataType();
+  listDataType;
+  listDataType.MultiDimLists();
 
   // var mapDataType = MapDataType();
   // mapDataType;
