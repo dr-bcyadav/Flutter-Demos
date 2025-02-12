@@ -18,11 +18,14 @@ Alternatively, one can make use of https://dartpad.dev/ for running the dart sni
 /*                           DATA TYPES IN DART                           */
 /* ====================================================================== */
 // The data types in dart are: 
-  // 1. Number: int, double, num and BigInt
-  // 2. Strings: String 
-  // 3. Booleans: bool 
-  // 4. Lists: List 
-  // 5. Maps: Map
+  // 1. Numbers: int, double, num and BigInt
+  // 2. Strings 
+  // 3. Booleans
+  // 4. Lists
+  // 5. Sets 
+  // 6. Maps
+  // 7. Queues
+  // 8. Enums
 
 
 
@@ -150,7 +153,7 @@ class ListDataType{
   // Demonstrating multi-dimensional lists
   MultiDimLists(){
     String pad = '*'*10;
-    print("\n $pad Multi Dimensional Lists $pad\n");
+    print("\n $pad Multi Dimensional Lists $pad");
 
     // Declaring a 2D list 
     int a = 3; 
@@ -171,8 +174,9 @@ class ListDataType{
     print("List7:\n$list7\n");
 
     // Creating a 3D list 
-    var list8 = List.generate(length, generator)
-  }
+    var list8 = List.generate(3, (i) => List.generate(3, (j) => List.generate(3, (k) => i+j+k)));
+    print("List8:\n$list8\n");
+
 }
 
 
