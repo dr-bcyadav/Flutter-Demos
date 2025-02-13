@@ -177,6 +177,7 @@ class ListDataType{
     var list8 = List.generate(3, (i) => List.generate(3, (j) => List.generate(3, (k) => i+j+k)));
     print("List8:\n$list8\n");
 
+  }
 }
 
 
@@ -224,6 +225,45 @@ class MapDataType{
 
 
 /* ====================================================================== */
+/*                                  SETS                                  */
+/* ====================================================================== */
+// Sets are the lists with no duplicates. These come into play when we need to store unique values in a variable without considering the order of the inputs. 
+class SetDataType{
+
+  var set1 = <String>{'Learning dart'};
+  Set<String> set2 = {'Learning consistently'};
+
+  SetDataType(){
+    print('Set1: $set1');
+    print('Set2: $set2');
+  }
+
+  // Checking the behaviour of a list and set with repeated elements
+    listVsSet(){
+
+      var list1 = <String>['learn', 'and', 'learn'];
+      var set3 = <String>{'learn', 'and', 'learn'};
+      print('\nList: $list1');
+      print('Set: $set3');
+      // - The repeated value is ignored while printing the set.
+  }
+
+  // Adding values to a set
+    addingElementsToset(){
+
+      set2.add('technology');
+      print('\nList: $set2');
+
+      set2.addAll(['generative', 'AI']);
+      print('\nList: $set2');
+      // - The repeated value is ignored while printing the set.
+      
+  }
+}
+
+
+
+/* ====================================================================== */
 /*                         CALLING ABOVE FUNCTIONS                        */
 /* ====================================================================== */
 void main(){
@@ -237,12 +277,17 @@ void main(){
   // var booleanDataType = BooleanDataType();
   // booleanDataType;
 
-  var listDataType = ListDataType();
-  listDataType;
-  listDataType.MultiDimLists();
+  // var listDataType = ListDataType();
+  // listDataType;
+  // listDataType.MultiDimLists();
 
   // var mapDataType = MapDataType();
   // mapDataType;
+
+  var setDataType = SetDataType();
+  setDataType;
+  setDataType.listVsSet();
+  setDataType.addingElementsToset();
 
 }
 
