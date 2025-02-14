@@ -183,6 +183,81 @@ class ListDataType{
 
 
 /* ====================================================================== */
+/*                                  SETS                                  */
+/* ====================================================================== */
+// Sets are the lists with no duplicates. These come into play when we need to store unique values in a variable without considering the order of the inputs. 
+class SetDataType{
+
+  var set1 = <String>{'Learning dart'};
+  Set<String> set2 = {'Learning consistently'};
+
+  SetDataType(){
+    print('Set1: $set1');
+    print('Set2: $set2');
+  }
+
+  // Checking the behaviour of a list and set with repeated elements
+  listVsSet(){
+
+    var list1 = <String>['learn', 'and', 'learn'];
+    var set3 = <String>{'learn', 'and', 'learn'};
+    print('\nList: $list1');
+    print('Set: $set3');
+    // - The repeated value is ignored while printing the set.
+  }
+
+  // Adding values to a set
+  addingElementsToset(){
+
+    set2.add('technology');
+    print('\nList: $set2');
+
+    set2.addAll(['generative', 'AI']);
+    print('\nList: $set2');
+    // - The repeated value is ignored while printing the set.
+  }
+
+  // Performing some other functions over sets
+  functionsOverSets(){
+
+    var set4 = {'Hello', 'Fellow', 'Dr.'};
+    print("\nElement at index 0 in set4: ${set4.elementAt(0)}");
+    print("Length of set4: ${set4.length}");
+    print("Checking wheter set4 contains word 'Dr': ${set4.contains('Dr.')}");
+
+    // Removing a particular element from set 
+    set4.remove('Hello');
+    print("Set4 after removing 'Hello': $set4");
+
+    // Removing all elements from a set 
+    set4.clear();
+    print("Set4 after clearing all elements: $set4");
+
+    // Using forEach over a set
+    var set5 = {'Another', 'set', 'of', 'strings'};
+    print("\nRunning `forEach` over a set");
+    set5.forEach((element){
+      if (element=='set'){
+        print('Yes');
+      }
+      else{
+        print('No');
+      }
+    });
+
+    // Converting a set to a list
+    var list5 = set5.toList();
+    print("\nSet converted to list: $list5");
+
+    // Converting a set to a map 
+  } 
+
+
+}
+
+
+
+/* ====================================================================== */
 /*                                   MAP                                  */
 /* ====================================================================== */
 class MapDataType{
@@ -225,45 +300,6 @@ class MapDataType{
 
 
 /* ====================================================================== */
-/*                                  SETS                                  */
-/* ====================================================================== */
-// Sets are the lists with no duplicates. These come into play when we need to store unique values in a variable without considering the order of the inputs. 
-class SetDataType{
-
-  var set1 = <String>{'Learning dart'};
-  Set<String> set2 = {'Learning consistently'};
-
-  SetDataType(){
-    print('Set1: $set1');
-    print('Set2: $set2');
-  }
-
-  // Checking the behaviour of a list and set with repeated elements
-    listVsSet(){
-
-      var list1 = <String>['learn', 'and', 'learn'];
-      var set3 = <String>{'learn', 'and', 'learn'};
-      print('\nList: $list1');
-      print('Set: $set3');
-      // - The repeated value is ignored while printing the set.
-  }
-
-  // Adding values to a set
-    addingElementsToset(){
-
-      set2.add('technology');
-      print('\nList: $set2');
-
-      set2.addAll(['generative', 'AI']);
-      print('\nList: $set2');
-      // - The repeated value is ignored while printing the set.
-      
-  }
-}
-
-
-
-/* ====================================================================== */
 /*                         CALLING ABOVE FUNCTIONS                        */
 /* ====================================================================== */
 void main(){
@@ -281,13 +317,14 @@ void main(){
   // listDataType;
   // listDataType.MultiDimLists();
 
-  // var mapDataType = MapDataType();
-  // mapDataType;
-
   var setDataType = SetDataType();
   setDataType;
   setDataType.listVsSet();
   setDataType.addingElementsToset();
+  setDataType.functionsOverSets();
+
+  // var mapDataType = MapDataType();
+  // mapDataType;
 
 }
 
