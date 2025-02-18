@@ -247,13 +247,50 @@ class SetDataType{
 
     // Converting a set to a list
     var list5 = set5.toList();
-    print("\nSet converted to list: $list5");
+    print("\nSet5 converted to list: $list5");
 
     // Converting a set to a map 
+    var map1 = set5.map((value){
+      return 'mapped $value';
+    });
+    print('Values in map: $map1');
   } 
 
+  setOperations(){
+    var set6 = {'el1', 'el2', 'el3'};
+    var set7 = {'el3', 'el4', 'el5'};
 
+    // Finding union 
+    print('\n\n****Set operations****\n');
+    print('Union of Set6 and Set7: ${set6.union(set7)}');
+
+    // Finding intersection
+    print('Intersection of Set6 and Set7: ${set6.intersection(set7)}');
+
+    // Finding difference of sets
+    print('Difference of Set6 and Set7: ${set6.difference(set7)}');
+    print('Difference of Set6 and Set7: ${set7.difference(set6)}');
+  }
+
+  // Performing set operations over multiple sets
+  setOperationsMultiple(){
+    var set6 = {'el1', 'el2', 'el3'};
+    var set7 = {'el3', 'el4', 'el5'};
+    var set8 = {'el3', 'el2', 'el4'};
+
+    // Finding union 
+    print('\n\n****Set operations over multiple sets****\n');
+    print('Union of Set6, Set7 and Set8: ${set6.union(set7).union(set8)}');
+
+    // Finding intersection
+    print('Intersection of Set6, Set7 and Set8: ${set6.intersection(set7).intersection(set8)}');
+
+    // Finding difference of sets
+    print('Difference of Set6, Set7 and Set8: ${set6.difference(set7).difference(set8)}');
+    print('Difference of Set6, Set7 and Set8: ${set7.difference(set6).difference(set8)}');
+  }
 }
+
 
 
 
@@ -322,6 +359,8 @@ void main(){
   setDataType.listVsSet();
   setDataType.addingElementsToset();
   setDataType.functionsOverSets();
+  setDataType.setOperations();
+  setDataType.setOperationsMultiple();
 
   // var mapDataType = MapDataType();
   // mapDataType;
