@@ -28,6 +28,12 @@ Alternatively, one can make use of https://dartpad.dev/ for running the dart sni
   // 8. Enums
 
 
+/* ====================================================================== */
+/*                                LIBRARIES                               */
+/* ====================================================================== */
+import 'dart:collection';
+
+
 
 /* ====================================================================== */
 /*                                 NUMBERS                                */
@@ -337,6 +343,52 @@ class MapDataType{
 
 
 /* ====================================================================== */
+/*                                 QUEUES                                 */
+/* ====================================================================== */
+class QueueDataType{
+
+  QueueDataType(){
+    // Creating a queue
+    Queue qu1 = new Queue();
+    print(qu1);  
+    
+    // Creating a queue from a list
+    var list1 = ['this', 'is', 'a', 'list'];
+    var qu2 = new Queue.from(list1);
+    print("qu2: $qu2");
+
+  }
+
+  // Using various function on Queue in Dart 
+  functionsOnQueues(){
+    var list2 = ['first', 'second', 'third'];
+    var qu3 = Queue.from(list2);
+    print("qu3: $qu3");
+
+    // Adding an element to a queue
+    qu3.add('fourth');
+    print("qu3: $qu3");
+
+    // Adding multiple elements to a queue
+    qu3.addAll(['fifth', 'sixth', 'seventh']);
+    print("qu3: $qu3");
+  
+    // Checking if the queue is empty or not 
+    print("Is qu3 empty: ${qu3.isEmpty}");
+
+    // Adding an element to the first
+    qu3.addFirst('zeroth');
+    print("qu3: $qu3");
+
+    // Adding an element to the last
+
+  }
+
+}
+
+
+
+/* ====================================================================== */
 /*                         CALLING ABOVE FUNCTIONS                        */
 /* ====================================================================== */
 void main(){
@@ -362,8 +414,12 @@ void main(){
   // setDataType.setOperations();
   // setDataType.setOperationsMultiple();
 
-  var mapDataType = MapDataType();
-  mapDataType;
+  // var mapDataType = MapDataType();
+  // mapDataType;
+
+  var queueDataType = QueueDataType();
+  queueDataType;
+  queueDataType.functionsOnQueues();
 
 }
 
