@@ -293,7 +293,6 @@ class SetDataType{
 
 
 
-
 /* ====================================================================== */
 /*                                   MAP                                  */
 /* ====================================================================== */
@@ -333,6 +332,7 @@ class MapDataType{
 
   }
 }
+// - When we assign same key repeatedly to different values, the last assigned key-value pair holds true in the memory.
 
 
 
@@ -354,16 +354,16 @@ void main(){
   // listDataType;
   // listDataType.MultiDimLists();
 
-  var setDataType = SetDataType();
-  setDataType;
-  setDataType.listVsSet();
-  setDataType.addingElementsToset();
-  setDataType.functionsOverSets();
-  setDataType.setOperations();
-  setDataType.setOperationsMultiple();
+  // var setDataType = SetDataType();
+  // setDataType;
+  // setDataType.listVsSet();
+  // setDataType.addingElementsToset();
+  // setDataType.functionsOverSets();
+  // setDataType.setOperations();
+  // setDataType.setOperationsMultiple();
 
-  // var mapDataType = MapDataType();
-  // mapDataType;
+  var mapDataType = MapDataType();
+  mapDataType;
 
 }
 
