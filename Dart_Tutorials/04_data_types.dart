@@ -3,12 +3,12 @@
 /* ====================================================================== */
 /* --------------------- Compiled by: (Dr.) B.C. Yadav ------------------ */
 /* ----------------------- On: 2025/01/18 08:03:04 ---------------------- */
-/* -------------------- Updated: 2025/02/20 05:03:57 -------------------- */
+/* -------------------- Updated: 2025/02/25 11:51:32 -------------------- */
 /* ====================================================================== */
 /* This code covers the basic know-hows of dart language focussing on data types in dart, and assumes that:
   - flutter and dart have been installed in the system,
   - `flutter` and `dart` are recognized as global commands, and 
-  - dart programs can be run simply by typing `dart \path\to\dart_program_name.dart` 
+  - dart programs can be run simply by typing `dart run \path\to\dart_program_name.dart` 
 
 Alternatively, one can make use of https://dartpad.dev/ for running the dart snippets.*/
 
@@ -381,9 +381,73 @@ class QueueDataType{
     print("qu3: $qu3");
 
     // Adding an element to the last
+    qu3.addLast('minus_one_always');
+    print("qu3: $qu3");
 
+    // Checking length 
+    print("Length of qu3: ${qu3.length}");
+
+    // Removing the first element from a queue
+    qu3.removeFirst();
+    print("qu3: $qu3");
+
+    // Removing the last element from a queue
+    qu3.removeLast();
+    print("qu3: $qu3");
+
+    // Displaying all the elements of a queue
+    qu3.forEach(print);
+    
   }
 
+}
+
+
+
+/* ====================================================================== */
+/*                                  ENUMS                                 */
+/* ====================================================================== */
+// Enumerations are useful when we have a fixed set of values that a variable can take, and we want to ensure that the variable is assigned one of those values and no other.
+// Enumerations are defined outside a class at the top-level of the file 
+enum DayOfWeek {
+  Monday, 
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday
+}
+// - Observe how the enum values are not enclosed withing quotes
+
+class EnumDataType{
+
+  EnumDataType(){
+    // Printing all values in the enum
+    print("Values stored in the defined enum:");
+    for (DayOfWeek today in DayOfWeek.values){
+      print(today);
+    }
+
+    // Printing just one value of the enum
+    DayOfWeek justOneDay = DayOfWeek.Tuesday;
+    print("\nA particular value of the defined enum$justOneDay");
+
+    // Printing a message on getting a particular value of the enum
+    var thisEnum = DayOfWeek.Saturday;
+    switch(thisEnum){
+      case DayOfWeek.Monday: print('Incorrect');
+      break;
+      case DayOfWeek.Wednesday: print('Incorrect');
+      break;
+      case DayOfWeek.Friday: print('Incorrect');
+      break;
+      case DayOfWeek.Saturday: print('Seems correct');
+      break;
+      default: print('Incorrect');
+    }
+    // - Notice the provision of default case or else all the enum cases are to be provided explicitly to the switch statement. 
+  }
 }
 
 
@@ -417,9 +481,12 @@ void main(){
   // var mapDataType = MapDataType();
   // mapDataType;
 
-  var queueDataType = QueueDataType();
-  queueDataType;
-  queueDataType.functionsOnQueues();
+  // var queueDataType = QueueDataType();
+  // queueDataType;
+  // queueDataType.functionsOnQueues();
+
+  var enumDataType = EnumDataType();
+  enumDataType;
 
 }
 
