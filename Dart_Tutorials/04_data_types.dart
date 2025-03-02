@@ -3,7 +3,7 @@
 /* ====================================================================== */
 /* --------------------- Compiled by: (Dr.) B.C. Yadav ------------------ */
 /* ----------------------- On: 2025/01/18 08:03:04 ---------------------- */
-/* -------------------- Updated: 2025/02/25 11:51:32 -------------------- */
+/* -------------------- Updated: 2025/03/02 11:19:41 -------------------- */
 /* ====================================================================== */
 /* This code covers the basic know-hows of dart language focussing on data types in dart, and assumes that:
   - flutter and dart have been installed in the system,
@@ -457,33 +457,33 @@ class EnumDataType{
 /* ====================================================================== */
 void main(){
 
-  // var numbers = Numbers();
-  // numbers;
+  var numbers = Numbers();
+  numbers;
 
-  // var stringDataType = StringDataType();
-  // stringDataType;
+  var stringDataType = StringDataType();
+  stringDataType;
 
-  // var booleanDataType = BooleanDataType();
-  // booleanDataType;
+  var booleanDataType = BooleanDataType();
+  booleanDataType;
 
-  // var listDataType = ListDataType();
-  // listDataType;
-  // listDataType.MultiDimLists();
+  var listDataType = ListDataType();
+  listDataType;
+  listDataType.MultiDimLists();
 
-  // var setDataType = SetDataType();
-  // setDataType;
-  // setDataType.listVsSet();
-  // setDataType.addingElementsToset();
-  // setDataType.functionsOverSets();
-  // setDataType.setOperations();
-  // setDataType.setOperationsMultiple();
+  var setDataType = SetDataType();
+  setDataType;
+  setDataType.listVsSet();
+  setDataType.addingElementsToset();
+  setDataType.functionsOverSets();
+  setDataType.setOperations();
+  setDataType.setOperationsMultiple();
 
-  // var mapDataType = MapDataType();
-  // mapDataType;
+  var mapDataType = MapDataType();
+  mapDataType;
 
-  // var queueDataType = QueueDataType();
-  // queueDataType;
-  // queueDataType.functionsOnQueues();
+  var queueDataType = QueueDataType();
+  queueDataType;
+  queueDataType.functionsOnQueues();
 
   var enumDataType = EnumDataType();
   enumDataType;
