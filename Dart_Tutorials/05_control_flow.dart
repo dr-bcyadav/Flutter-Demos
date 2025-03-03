@@ -17,16 +17,17 @@ Alternatively, one can make use of https://dartpad.dev/ for running the dart sni
 /* ====================================================================== */
 /*                          CONTROL FLOW IN DART                          */
 /* ====================================================================== */
-// There are four decision making/control flow statements in dart: 
-  // if Statement
-  // if-else Statement
-  // else-if Ladder
-  // Nested if Statement
+// These are the following making/control flow statements in dart: 
+  // if statement
+  // if-else-if/ladder if statement
+  // Nested if
+  // switch case
+
 
 
 
 /* ====================================================================== */
-/*                              IF STATEMENT                              */
+/*                                   IF                                   */
 /* ====================================================================== */
 class IfStatement{
 
@@ -46,7 +47,7 @@ class IfStatement{
 
 
 /* ====================================================================== */
-/*                          IF ELSE IF STATEMENT                          */
+/*                               IF ELSE IF                               */
 /* ====================================================================== */
 class IfElseIfStatement{
 
@@ -60,11 +61,49 @@ class IfElseIfStatement{
     if (int2>4){
       print("Condition (20>4) is true");
     }
-    else{
+    else if (int2>5){
+      print("Condition (20>5) is true but it won't be checked if the previous condition is met");
+    }
+    else {
       print("Condition is false");
     }
   }
 }
+
+
+
+/* ====================================================================== */
+/*                                NESTED IF                               */
+/* ====================================================================== */
+// if else if conditions can be nested into one another as per use case.
+class NestedIf{
+
+  int x = 5;
+  int y = 7;
+
+  NestedIf(){
+    print("\n***** Nested If *****");
+  }
+
+  executionOfNestedIf(){
+    if((++x > y--) && (++x < ++y)){
+        print("Condition true");
+    }
+    else {
+        // print("Condition false");
+        if(++x < 20){
+          print("Finally this condition is true.");
+        }
+    }
+  }
+}
+
+
+
+/* ====================================================================== */
+/*                               SWITCH CASE                              */
+/* ====================================================================== */
+
 
 
 
@@ -78,5 +117,8 @@ void main(){
 
   var ifElseIfStatement = IfElseIfStatement();
   ifElseIfStatement.executionOfIfElse();
+
+  var nestedIf = NestedIf();
+  nestedIf.executionOfNestedIf();
 
 }
