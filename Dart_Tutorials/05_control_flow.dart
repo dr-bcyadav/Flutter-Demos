@@ -103,7 +103,27 @@ class NestedIf{
 /* ====================================================================== */
 /*                               SWITCH CASE                              */
 /* ====================================================================== */
+class SwitchCase{
 
+  int x = 1;
+
+  executionOfSwitch(){
+    switch(x){
+      case 1: {
+        print('The number is 1');
+      } break;
+      case 2: {
+        print('The number is 2');
+      } break;
+      case 3: {
+        print('The number is 3');
+      } break;
+      default: {
+        print('This is the default case');
+      } break;
+  }
+  }
+}
 
 
 
@@ -112,13 +132,16 @@ class NestedIf{
 /* ====================================================================== */
 void main(){
 
-  var ifStatement = IfStatement();
-  ifStatement.executionOfIf();
+  // var ifStatement = IfStatement();
+  // ifStatement.executionOfIf();
 
-  var ifElseIfStatement = IfElseIfStatement();
-  ifElseIfStatement.executionOfIfElse();
+  // var ifElseIfStatement = IfElseIfStatement();
+  // ifElseIfStatement.executionOfIfElse();
 
-  var nestedIf = NestedIf();
-  nestedIf.executionOfNestedIf();
+  // var nestedIf = NestedIf();
+  // nestedIf.executionOfNestedIf();
+
+  var switchCase = SwitchCase();
+  switchCase.executionOfSwitch();
 
 }
