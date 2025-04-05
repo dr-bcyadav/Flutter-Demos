@@ -1,4 +1,2 @@
 # Ignore this folder 
-flutter/
-__pycache__
-lib_app/
+!Dart_Tutorials/
